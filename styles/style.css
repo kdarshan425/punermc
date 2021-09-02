@@ -1,0 +1,482 @@
+body {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10000 !important;
+    top: 0;
+    left: 0;
+    background:url('../img/curtain.png') no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    transition: 4.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+  
+  .animate-left {
+      position: fixed;
+      -webkit-animation: animateleft 0.4s;
+      animation: animateleft 0.4s;
+  }
+  @-webkit-keyframes animateleft {
+      from {
+          top: -300px;
+          opacity: 0;
+      }
+      to {
+          bottom: 0;
+          opacity: 1;
+      }
+  }
+  @keyframes animateleft {
+      from {
+          top: -300px;
+          opacity: 0;
+      }
+      to {
+          bottom: 0;
+          opacity: 1;
+      }
+  }
+
+
+  /*Pages*/
+  .carousel-caption {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    
+}
+
+h1 {
+    
+    font-family: 'Raleway',sans-serif;
+    font-weight: bolder;
+    font-size: 75px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 70px;
+}
+@media(max-width:768px){
+    .carousel-caption {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.carousel-inner h1 {
+    
+    font-family: 'Quantico',sans-serif;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 40px;
+    
+
+}
+}
+
+.rmc-caro{
+min-width: 100%;
+height:100vh;
+background-repeat: no-repeat;
+background-size: cover;
+margin-top: auto;
+}
+
+@media(max-width:768px){
+    .rmc-caro{
+        min-width: 100%;
+        height:100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: auto;
+        }
+}
+
+.rmc-caro-caption{
+    padding-top:5cm;
+}
+
+.banner-img{
+    width:300px;
+    height:auto;
+}
+
+@media(max-width:768px) {
+    .banner-img{
+        width:200px;
+        height:auto;
+    }
+    
+}
+
+.rmc-caro-caption h2{
+    color: #c1f4ff !important;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: 25px;
+    text-shadow: 0 1px 2px rgb(0 0 0);
+}
+
+.banner-btn{
+    position: relative;
+    border: 0px solid;
+    border-radius: 0px;
+    padding: 0rem 0rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 2.1rem;
+    cursor: pointer;
+    overflow: hidden;
+    width: 150px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    width: 200px;
+    transition: ease-in-out 1s !important;
+    padding: 10px;
+    background-color: black !important;
+    text-decoration:none !important;
+  }
+  
+  
+  .banner-in{
+    padding: 70px;
+    background-color:#6b63ff3a;
+  }
+  
+  .banner-btn.btn-f{
+   padding: 20px 40px 20px 40px !important;
+    color: white;
+    width: 200px;
+    
+    transition: ease-in-out 1s !important;
+  }
+  
+  a.banner-btn.btn-f:hover{
+   
+    color: white;
+    width: 200px;
+    
+    text-decoration: none;
+    
+  }
+
+  .marcol{
+    margin-bottom: 2cm;
+}
+
+/*Animations*/
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.fadeInUpSmall {
+    animation-name: fadeInUpSmall;
+    transform-origin: 50% 100%;
+}
+.animated {
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    opacity: 1;
+}
+/**
+* FadeInUpSmall Keyframes Animation
+*/
+.fadeInUpSmall {
+	animation-name: fadeInUpSmall;
+	transform-origin: 50% 100%;
+}
+
+@keyframes fadeInUpSmall {
+	0% {
+		opacity: 0;
+		transform: translateY(60px) scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+/**
+* FadeInLeftSmall Keyframes Animation
+*/
+.fadeInLeftSmall {
+	animation-timing-function: ease-in-out;
+	-webkit-animation-name: fadeInLeftSmall;
+	animation-name: fadeInLeftSmall;
+}
+
+@keyframes fadeInLeftSmall {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px) scale(0.95);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+}
+
+/**
+* FadeInRightSmall Keyframes Animation
+*/
+.fadeInRightSmall {
+	animation-timing-function: ease-in-out;
+	-webkit-animation-name: fadeInRightSmall;
+	animation-name: fadeInRightSmall;
+}
+
+@keyframes fadeInRightSmall {
+	0% {
+		opacity: 0;
+		transform: translateX(100px) scale(0.95);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+}
+
+/**
+* FadeInUp Keyframes Animation
+*/
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+/**
+* FadeInDown Keyframes Animation
+*/
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+
+/**
+* FadeInLeft Keyframes Animation
+*/
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+
+/**
+* FadeInRight Keyframes Animation
+*/
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.fadeInRight {
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+}
+
+/*
+**
+* FadeOut Keyframes Animation
+*/
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
