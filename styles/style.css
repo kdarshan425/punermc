@@ -544,3 +544,20 @@ content: "";
 background: #16f4d3;
 height: 2px;
 }
+
+.barred::after {
+width: 180px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 40px;
+display: block;
+content: "";
+background: #ec1f24;
+height: 2px;
+}
+
+li{
+    font-size: 20px;
+    color: gray;
+    text-align: start;
+}

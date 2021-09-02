@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="img/logofinal.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -11,86 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
-       .blackb{
-  /* background-color: rgba(0,0,0,.5); */
-  min-height: 100%;
-  min-width: 100%;
-}
-
-
-.poster-name h1{
-font-size:70px;
-color:black;
-}
-
-.poster-img{
-height:250px;
-width:auto;
-}
-
-
-@media(min-width:768px) {
-.banner{
-padding-left:14%;
-
-}
-}
-
-.poster-name{
-padding:20px;
-}
-@media(max-width:768px) {
-.txt-center{
-text-align:center;
-}
-.poster-name h1{
-font-size:40px;
-}
-.poster-img{
-height:200px;
-width:auto;
-}
-.banner{
-padding-left:auto;
-text-align:center;
-}
-
-}
-
-@media(max-width:568px) {
-.banner{
-padding-left:auto;
-
-}
-}
-
-.bar::after {
-width: 180px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 40px;
-display: block;
-content: "";
-background: #16f4d3;
-height: 2px;
-}
-
-.barred::after {
-width: 180px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 40px;
-display: block;
-content: "";
-background: #ec1f24;
-height: 2px;
-}
-
-li{
-    font-size: 20px;
-    color: gray;
-    text-align: start;
-}
+       
     </style>
 </head>
 <body>
@@ -103,84 +25,52 @@ li{
             </div>
         </div>
     </div>
-    <div class="page">
-        
-        
+    <div class="page">       
 
 
-    <nav style="background: black">
-    <!-- <div style="background:white;">
-        <div class="cotainer">
-            <center>
-                <div>
-                <center>
-                    <a href="index.php" style="padding:30px;content-align:center;float:left;font-weight: 900;font-family: 'Raleway', sans-serif;"><center><img style="width:70px;height:auto;" src="img/logo1.png"></center></a>
+        <nav style="background: black">
+        
+            <div class="topnav" id="myTopnav">
+                <a href="index.php" style="padding: 5px 16px;float:left;font-weight: 900;font-family: 'Raleway', sans-serif;"><img style="width:50px;height:auto;" src="img/logofinal.png"></a>
+                <a style="height: 60px;"></a>  
+                
+                <a  href="contactus.php">Contact</a>              
+                <a  href="aboutus.php">About</a>
+                <a  href="index.php">Home</a>       
+
+                <a href="javascript:void(0);" class="icon"  onclick="dk_open()">
+
+                <div class="hamburger-menu">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div> 
+                </a>
             
-                </center>
-                </div>
-            </center>
-        </div>
-    </div> -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.php" style="padding: 5px 16px;float:left;font-weight: 900;font-family: 'Raleway', sans-serif;"><img style="width:50px;height:auto;" src="img/logofinal.png"></a>
-        <a style="height: 60px;"></a>  
-        
-        <a  href="contactus.php">Contact</a>  
-        
-        <div class="dropdown" style="right:0px">
-        <a href="products.php" class="dropbtn">Products</a>
-        <div class="dropdown-content" style="right: 20px;">
-            <a href="ready-mix-concrete.php">Ready mix concrete</a>
-            <a href="water-resist-concrete.php">Water resist concrete</a>
-            <a href="color-stamped-concrete.php">Color stamped concrete</a>
-            <a href="self-compacted-concrete.php">Self commpacting concrete</a>
-            <a href="light-weight-concrete.php">light weight concrete</a>      
-            
-        </div>
-        </div>
-
-        <a  href="aboutus.php">About</a>
-        <a  href="index.php">Home</a>       
-
-        <a href="javascript:void(0);" class="icon"  onclick="dk_open()">
-
-        <div class="hamburger-menu">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-        </div> 
-        </a>
-    
-    </div>
-</nav>
+            </div>
+        </nav>
 
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="sidebar animate-left" style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="dk_close()" style="padding-top: 30px;font-size: 20px;">Close ×</a>
-    <a  href="index.php" onclick="dk_close()">Home</a>      
-    <a  href="aboutus.php" onclick="dk_close()">About</a>
-    <a  href="products.php" onclick="dk_close()">Products</a>  
-    <a  class="dropdown-btn">Overview
-    <i class="fa fa-caret-down"></i>
-    </a>
-    <div class="dropdown-container">
-    <a style="font-size: 17px;" href="ready-mix-concrete.php" onclick="dk_close()" >Ready mix concrete</a>
-    <a style="font-size: 17px;" href="water-resist-concrete.php" onclick="dk_close()" >Water resist concrete</a>
-    <a style="font-size: 17px;" href="color-stamped-concrete.php" onclick="dk_close()" >Color stamped concrete</a>
-    <a style="font-size: 17px;" href="self-compacted-concrete.php" onclick="dk_close()" >Self commpacting concrete</a>
-    <a style="font-size: 17px;" href="light-weight-concrete.php" onclick="dk_close()" >light weight concrete</a>
-    </div>
-    <a  href="contactus.php" onclick="dk_close()">Contact Us</a>
-      
-    
-</nav>
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="sidebar animate-left" style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="dk_close()" style="padding-top: 30px;font-size: 20px;">Close x</a>
+            <a  href="index.php" onclick="dk_close()">Home</a>      
+            <a  href="aboutus.php" onclick="dk_close()">About</a>
+            <a  href="products.php" onclick="dk_close()">Products</a>  
+            <a  class="dropdown-btn">Overview
+            <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-container">
+            <a style="font-size: 17px;" href="ready-mix-concrete.php" onclick="dk_close()" >Ready mix concrete</a>
+            <a style="font-size: 17px;" href="water-resist-concrete.php" onclick="dk_close()" >Water resist concrete</a>
+            <a style="font-size: 17px;" href="color-stamped-concrete.php" onclick="dk_close()" >Color stamped concrete</a>
+            <a style="font-size: 17px;" href="self-compacted-concrete.php" onclick="dk_close()" >Self commpacting concrete</a>
+            <a style="font-size: 17px;" href="light-weight-concrete.php" onclick="dk_close()" >light weight concrete</a>
+            </div>
+            <a  href="contactus.php" onclick="dk_close()">Contact Us</a>
+        </nav>
 
-
-
-
-
-        <div style="background: url(img/background.PNG) no-repeat ;background-size: cover;" class="sai-c1 rmc-caro">
+        <div style="height:auto;padding-bottom:5cm;background: url(img/background.PNG) no-repeat ;background-size: cover;" class="sai-c1 rmc-caro">
             <div class="blackb">
                 <div class="container">
                     <div class="rmc-caro-caption ">
@@ -208,7 +98,7 @@ li{
         </div>
         <div style="background:white;padding-bottom:50px;" class="abt">
             <div class="container">
-                <div style="padding:40px;" class="bar">
+                <div style="padding:60px;" class="bar">
                     <center>
                         <h1 style="color:black;font-family: 'Quantico',sans-serif;">About Us</h1>
                     </center>
@@ -234,7 +124,7 @@ li{
         </div>
         <div style="background:url(img/background.PNG);background-size: cover;background-attachment: fixed;" class="vision">
             <div class="container">
-                <div style="padding:40px;" class="barred">
+                <div style="padding:60px;" class="barred">
                     <center>
                         <h1 style="color:black;font-family: 'Quantico',sans-serif;">Our Vision</h1>
                     </center>
@@ -254,7 +144,7 @@ li{
         </div>
         <div class="mission">
             <div class="container">
-                <div style="padding:40px;" class="bar">
+                <div style="padding:60px;" class="bar">
                     <center>
                         <h1 style="color:black;font-family: 'Quantico',sans-serif;">Our Mission</h1>
                     </center>
