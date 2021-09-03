@@ -29,38 +29,7 @@
     <div class="page">       
 
 
-        <nav style="background: black">
-        
-            <div style="background-color: white;" class="topnav" id="myTopnav">
-                <a href="index.html" style="padding: 5px 16px;float:left;font-weight: 900;font-family: 'Raleway', sans-serif;"><img style="width:50px;height:auto;" src="img/logofinal.png"></a>
-                <a style="height: 60px;"></a>  
-                <a  href="events.html">Events</a> 
-                <a  href="members.html">Members</a>       
-                <a  href="contactus.html">Contact</a>              
-                <a  href="index.html #about">About</a>                
-
-                <a href="javascript:void(0);" class="icon"  onclick="dk_open()">
-
-                <div class="hamburger-menu">
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line3"></div>
-                </div> 
-                </a>
-            
-            </div>
-        </nav>
-
-
-        <!-- Sidebar on small screens when clicking the menu icon -->
-        <nav class="sidebar animate-left" style="display:none" id="mySidebar">
-            <a href="javascript:void(0)" onclick="dk_close()" style="padding-top: 30px;font-size: 20px;">Close x</a>
-            <a  href="index.html" onclick="dk_close()">Home</a>      
-            <a  href="index.html #about" onclick="dk_close()">About</a>
-            <a  href="events.html" onclick="dk_close()">Events</a>
-            <a  href="contactus.html" onclick="dk_close()">Contact Us</a>
-            <a  href="members.html" onclick="dk_close()">Our Members</a>  
-        </nav>
+    <?php  include 'partials/header.php';?>
 
         <div class="vision">
             <div style="background:url(img/background.PNG);background-size: cover;background-attachment: fixed;" >
@@ -162,13 +131,7 @@
         </div>-->
     </div> 
 
-    <footer class="footer" style="margin-top:40px;background: black;padding-top: 24px;padding-bottom: 24px; width: 100%">
-        <center>
-            <div>
-                <p style="color: #c7c5c5;font-weight: 300;font-family: 'Raleway', sans-serif;">All rights reserved <br>  © Pune Rmc Association</p>
-            </div>
-        </center>      
-    </footer>
+    <?php  include 'partials/footer.php';?>
 
     <script>
         function myFunction() {
