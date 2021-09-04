@@ -77,7 +77,7 @@
 
      <div style="width:100%;height:auto;background: url(img/bg.jpg);padding-top:70px;">
         <div style="padding:40px;" class="container">
-        <center><h1 style="color:black;font-family: 'Raleway', sans-serif;">Consumer </h1></center>
+        <center><h1 style="color:black;font-family: 'Raleway', sans-serif;">Add member </h1></center>
         </div>    
     </div>
 
@@ -151,9 +151,9 @@
             
             <form method="post" action="<?php $_SERVER["REQUEST_URI"]?>" enctype="multipart/form-data"> 
                 
-                    <div class="profile-info" style="font-family: 'Raleway', sans-serif;"> <b> Persnal Info :</b> </div>
+                    <div class="profile-info" style="font-family: 'Raleway', sans-serif;"> <b>  Info :</b> </div>
                         <div class="mb-3">
-                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Name <span style="color:red;font-size:18px;">*</span></label>
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Company Name <span style="color:red;font-size:18px;">*</span></label>
                             <div class="input-group flex-nowrap">                
                                 <input name="Name" type="text" class="form-control" placeholder="Name" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
                             </div>                

@@ -27,9 +27,16 @@
        .laptopstart{
            text-align:start !important;
        }
+
+       
        @media(max-width:568px) {
         .laptopstart{
            text-align:center !important;
+       }
+
+       .img-responsive{
+           padding-top:50px;
+           padding-bottom:30px;
        }
 }
 h3{
@@ -80,16 +87,26 @@ p{
                         $mobile = $row['mobile_no'];
                         $address = $row['address'];
                         $created = $row['created'];
-
+                        $logo = $row['logo'];
 
                         echo'
                         <div style="padding-top: 15px;padding-bottom: 15px;">
                             <div style="padding:20px;" class="container">
                                 <div style="box-shadow: 0 3px 5px -1px rgb(0 0 0 / 8%), 0 5px 8px 0 rgb(0 0 0 / 12%), 0 1px 14px 0 rgb(0 0 0 / 6%);" class="row">
                                     <div class="col-lg-3 col-md-3 col-xs-3">
-                                        <center>
-                                            <div class="center" >
-                                                <img style="height:100px;width:auto;" src="img/logofinal.png" alt="logo">
+                                        <center class="img-responsive">
+                                            <div class="center" >';
+                                            if (!empty($logo)){
+                                                echo'
+                                                <img style="height:auto;width:70%;" src="img/companylogo/'.$logo.'" alt="'.$Name.'">
+                                                ';
+                                            }
+                                             else{
+                                             echo'
+                                                <img style="height:auto;width:70%;" src="img/companylogo/logofinal.png" alt="'.$Name.'">
+                                                ';
+                                            }    
+                                            echo'
                                             </div>
                                         </center>
                                     </div>
