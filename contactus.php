@@ -2,7 +2,9 @@
 <html>
 <head>
     <link rel="icon" href="img/logofinal.png">
-    <title>Contact Us</title>
+    <title>Contact Us</title>    
+    <meta name="#" content="#" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/header.css">

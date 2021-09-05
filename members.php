@@ -2,6 +2,9 @@
 <html>
 <head>
     <link rel="icon" href="img/logofinal.png">
+    <meta name="#" content="#" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Our members</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css">
@@ -9,27 +12,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Abril+Fatface&family=Quantico:ital@1&family=Raleway:wght@200&display=swap" rel="stylesheet">
     <!-- CSS only -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
         p {
-    margin-top: 0;
-    margin-bottom: 0rem;
-}
-        .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 170px;
-}
+            margin-top: 0;
+            margin-bottom: 0rem;
+        }
+            .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 170px;
+        }
 
        .laptopstart{
            text-align:start !important;
        }
 
+       .image{
+        height:auto;
+        width:70%;
+
+       }
        
+       @media(max-width:768px) {
+           .image{
+        height:auto;
+        width:30%;
+
+       }
+       }
+
        @media(max-width:568px) {
+        .image{
+        height:auto;
+        width:40%;
+
+       }
         .laptopstart{
            text-align:center !important;
        }
@@ -45,6 +66,10 @@ h3{
 
 p{
     font-family: 'Quantico',sans-serif;
+}
+a{
+    text-decoration:none;
+    color:black;
 }
     </style>
 </head>
@@ -88,22 +113,34 @@ p{
                         $address = $row['address'];
                         $created = $row['created'];
                         $logo = $row['logo'];
+                        $website = $row['website_url'];
 
-                        echo'
+
+                        if (!empty($website)){
+                            echo'
+                            <a href="'.$website.'" target="_blank">
+                            ';
+                        }
+                         else{
+                         echo'
+                             <a href="">
+                            ';
+                        }    
+                        echo'                        
                         <div style="padding-top: 15px;padding-bottom: 15px;">
                             <div style="padding:20px;" class="container">
                                 <div style="box-shadow: 0 3px 5px -1px rgb(0 0 0 / 8%), 0 5px 8px 0 rgb(0 0 0 / 12%), 0 1px 14px 0 rgb(0 0 0 / 6%);" class="row">
                                     <div class="col-lg-3 col-md-3 col-xs-3">
-                                        <center class="img-responsive">
-                                            <div class="center" >';
+                                        <center>
+                                            <div class="center img-responsive" >';
                                             if (!empty($logo)){
                                                 echo'
-                                                <img style="height:auto;width:70%;" src="img/companylogo/'.$logo.'" alt="'.$Name.'">
+                                                <img class="image" src="img/companylogo/'.$logo.'" alt="'.$Name.'">
                                                 ';
                                             }
                                              else{
                                              echo'
-                                                <img style="height:auto;width:70%;" src="img/companylogo/logofinal.png" alt="'.$Name.'">
+                                                <img class="image" src="img/companylogo/logofinal.png" alt="'.$Name.'">
                                                 ';
                                             }    
                                             echo'
@@ -121,10 +158,11 @@ p{
                                 </div>
                             </div>
                         </div>
+                        </a>
                         ';
                     }
                     ?>
-                   </div>
+                    </div>
                 </center>
             </div>
         </div>       

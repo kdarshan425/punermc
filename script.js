@@ -17,8 +17,8 @@
    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
      
    // Output the result in an element with id="demo"
-   document.getElementById("demo").innerHTML = days + "D " + hours + "H "
-   + minutes + "M " + seconds + "S ";
+  //  document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+  //  + minutes + "M " + seconds + "S ";
      
    // If the count down is over, write some text 
    if (distance < 0) {
@@ -42,7 +42,8 @@
  
  /* Close */
  function closeNav() {
-   document.getElementById("myNav").style.height = "0%";
+   document.getElementById("myNav").style.left = "100%";
+   document.getElementById("myNav1").style.left = "-100%";
  }
 
  

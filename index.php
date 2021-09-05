@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "keywords" content = "pune rmc plant,Rmc Plant In Pune, Ready Mix Concrete In Pune, Rmc Manufacturers In Pune,pune rmc association, pune rmc, concrete, cement, rmcwebsite, rmc" />
+    <meta name="description" content="Pune RMC Association is a industry organisation of leading ready mix concrete procedures of pune district. " />
+    <link rel="canonical" href="https://punermcassociation.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Pune Rmc Association" />
+    <meta property="og:description" content="Pune RMC Association is a industry organisation of leading ready mix concrete procedures of pune district. " />
+    <meta property="og:url" content="https://punermcassociation.com/" />
+
     <link rel="icon" href="img/logofinal.png">
     <title>PUNE RMC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,15 +22,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+     <style>
+         .launch-btn {
+    position: relative;
+    border: none;
+    border-radius: 0px;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .3s, outline 0s;
+    transition: all .3s, outline 0s;
+    width: 150px;
+    font-family: 'Orbitron', sans-serif;
+}
+     </style>
 </head>
 <body>
-    <div id="myNav" style="display:none;" class="overlay animate-left">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="myNav" class="overlay">
+        <div id="myNav1" class="overlay">
         <div class="overlay-content">
             <div class="container">
-                <h1 style="size:30px;font-size: 80px; color: white;font-family: 'Quantico',sans-serif;" id="demo"></p>
-                <!-- <button onclick="myVar = setTimeout(closeNav, 3000)">Launch</button> -->
+                <h1 style="size:30px;font-size: 80px; color: white;font-family: 'Quantico',sans-serif;">Welcome</h1>
+                <!-- <h1>PUNE RMC ASSOCIATION</h1> -->
+                <!-- <h1  id="demo"></h1> -->
+                <div style="padding-top:60px;">
+                <button style="font-family: 'Quantico',sans-serif;color:white;background:black;" class="launch-btn" onclick="closeNav()">Launch</button>
+                </div>
             </div>
+        </div>
         </div>
     </div>
     <div class="page">       

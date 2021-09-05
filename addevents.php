@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200;1,600;1,900&display=swap" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo:wght@300&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <title>Add Member</title>
+    <title>Add Events</title>
     <link rel="stylesheet" type="text/css" href="styles/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
@@ -83,7 +83,7 @@
 
      <div style="width:100%;height:auto;background: url(img/bg.jpg);padding-top:70px;">
         <div style="padding:40px;" class="container">
-        <center><h1 style="color:black;font-family: 'Raleway', sans-serif;">Add member </h1></center>
+        <center><h1 style="color:black;font-family: 'Raleway', sans-serif;">Add Event </h1></center>
         </div>    
     </div>
 
@@ -95,10 +95,14 @@
         if($method=='POST'){
         // Insert into thread db
         $Name = $_POST['Name'];
-        $member = $_POST['member'];
-        $contact = $_POST['contact'];
-        $address = $_POST['address'];        
+        $desc = $_POST['desc'];
+        $date = $_POST['date'];
         $img = $_POST['img'];
+        $img1 = $_POST['img1'];   
+        $img2 = $_POST['img2'];   
+        $img3 = $_POST['img3'];   
+        $img4 = $_POST['img4'];        
+        
         
         
         
@@ -106,27 +110,41 @@
         $Name = str_replace(">", "&gt;", $Name); 
         $Name = str_replace("'", "\\'", $Name);
 
-        $member = str_replace("<", "&lt;", $member);
-        $member = str_replace(">", "&gt;", $member); 
-        $member = str_replace("'", "\\'", $member);
+        $desc = str_replace("<", "&lt;", $desc);
+        $desc = str_replace(">", "&gt;", $desc); 
+        $desc = str_replace("'", "\\'", $desc);
+
+        $date = str_replace("<", "&lt;", $date);
+        $date = str_replace(">", "&gt;", $date); 
+        $date = str_replace("'", "\\'", $date);
 
         $img = str_replace("<", "&lt;", $img);
         $img = str_replace(">", "&gt;", $img); 
         $img = str_replace("'", "\\'", $img);
 
-        $address = str_replace("<", "&lt;", $address);
-        $address = str_replace(">", "&gt;", $address); 
-        $address = str_replace("'", "\\'", $address);
+        $img1 = str_replace("<", "&lt;", $img1);
+        $img1 = str_replace(">", "&gt;", $img1); 
+        $img1 = str_replace("'", "\\'", $img1);
 
-        $contact = str_replace("<", "&lt;", $contact);
-        $contact = str_replace(">", "&gt;", $contact); 
-        $contact = str_replace("'", "\\'", $contact);
+        $img2 = str_replace("<", "&lt;", $img2);
+        $img2 = str_replace(">", "&gt;", $img2); 
+        $img2 = str_replace("'", "\\'", $img2);
+
+        $img3 = str_replace("<", "&lt;", $img3);
+        $img3 = str_replace(">", "&gt;", $img3); 
+        $img3 = str_replace("'", "\\'", $img3);
+
+        $img4 = str_replace("<", "&lt;", $img4);
+        $img4 = str_replace(">", "&gt;", $img4); 
+        $img4 = str_replace("'", "\\'", $img4);
+
+        
 
         
         
-        // INSERT INTO `Acc_inst` (`ID`, `Name`, `membership_no`, `mobile_no`, `address`, `logo`, `created`) VALUES (NULL, 'a', 'a', 'a', 'a', 'a', CURRENT_TIMESTAMP);
+        // INSERT INTO `Events` (`Id`, `Eventname`, `Description`, `Eventdate`, `image1`, `image2`, `image3`, `image4`, `image5`) VALUES (NULL, 'Rmc Website Inogration', 'abc', '2021-09-05', 'logofinal.png', 'logofinal.png', 'logofinal.png', 'logofinal.png', 'logofinal.png');
 
-        $sql1 =  "INSERT INTO `Acc_inst` (`ID`, `Name`, `membership_no`, `mobile_no`, `address`, `logo`, `created`) VALUES (NULL, '$Name', '$member', '$contact', '$address', '$img', CURRENT_TIMESTAMP);";
+        $sql1 =  "INSERT INTO `Events` (`Id`, `Eventname`, `Description`, `Eventdate`, `image1`, `image2`, `image3`, `image4`, `image5`, `timestamp`) VALUES (NULL, '$Name', '$desc', '$date', '$img', '$img1', '$img2', '$img3', '$img4',CURRENT_TIMESTAMP);";
         $result = mysqli_query($conn, $sql1);
 
         if($result){           
@@ -157,37 +175,56 @@
             
             <form method="post" action="<?php $_SERVER["REQUEST_URI"]?>" enctype="multipart/form-data"> 
                 
-                    <div class="profile-info" style="font-family: 'Raleway', sans-serif;"> <b>  Info :</b> </div>
+                    <div class="profile-info" style="font-family: 'Raleway', sans-serif;"> <b> Event Info :</b> </div>
                         <div class="mb-3">
-                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Company Name <span style="color:red;font-size:18px;">*</span></label>
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Event Name <span style="color:red;font-size:18px;">*</span></label>
                             <div class="input-group flex-nowrap">                
                                 <input name="Name" type="text" class="form-control" placeholder="Name" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
                             </div>                
                         </div>                
                         <div class="mb-3">
-                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Membership No <span style="color:red;font-size:18px;">*</span></label>
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Event Desscription <span style="color:red;font-size:18px;">*</span></label>
                             <div class="input-group flex-nowrap">                
-                                <input name="member" type="text" class="form-control" placeholder="Memborship No" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
+                                <input name="desc" type="text" class="form-control" placeholder="Event Description" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
                             </div>                
                         </div>   
                         <div class="mb-3">
-                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Contact No <span style="color:red;font-size:18px;">*</span></label>
-                            <div class="input-group flex-nowrap">                
-                                <input name="contact" type="text" class="form-control" placeholder="Contact No" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Date of event <span style="color:red;font-size:18px;">*</span></label>
+                            <div class="input-group flex-nowrap">
+                                <input name="date" type="date" id="date" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping"  >                       
                             </div>                
-                        </div>   
+                        </div> 
                         <div class="mb-3">
-                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Address <span style="color:red;font-size:18px;">*</span></label>
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Image URL 1 <span style="color:red;font-size:18px;">*</span></label>
                             <div class="input-group flex-nowrap">                
-                                <input name="address" type="text" class="form-control" placeholder="Address" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
+                                <input name="img" type="text" class="form-control" placeholder="ex. img1.jpg" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping">
+                            </div>                
+                        </div>         
+                        <div class="mb-3">
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Image URL 2<span style="color:red;font-size:18px;">*</span></label>
+                            <div class="input-group flex-nowrap">                
+                                <input name="img1" type="text" class="form-control" placeholder="ex. img2.jpg" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
+                            </div>                
+                        </div> 
+                        <div class="mb-3">
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Image URL 3<span style="color:red;font-size:18px;">*</span></label>
+                            <div class="input-group flex-nowrap">                
+                                <input name="img2" type="text" class="form-control" placeholder="ex. img3.jpg" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
+                            </div>                
+                        </div> 
+                        <div class="mb-3">
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Image URL 4<span style="color:red;font-size:18px;">*</span></label>
+                            <div class="input-group flex-nowrap">                
+                                <input name="img3" type="text" class="form-control" placeholder="ex. img4.jpg" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
+                            </div>                
+                        </div> 
+                        <div class="mb-3">
+                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Image URL 5<span style="color:red;font-size:18px;">*</span></label>
+                            <div class="input-group flex-nowrap">                
+                                <input name="img4" type="text" class="form-control" placeholder="ex. img5.jpg" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping" required>
                             </div>                
                         </div>  
-                        <div class="mb-3">
-                            <label style="font-size:1.3rcm;font-weight:bold;" for="validationTextarea" class="form-label lebel1">Image URL <span style="color:red;font-size:18px;">*</span></label>
-                            <div class="input-group flex-nowrap">                
-                                <input name="img" type="text" class="form-control" placeholder="ex. logo.png" aria-describedby="inputGroup-sizing-lg" aria-label="Challengename" aria-describedby="addon-wrapping">
-                            </div>                
-                        </div>                 
+                                  
                     </div>
                 </div>
                 
